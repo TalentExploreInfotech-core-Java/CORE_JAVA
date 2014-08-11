@@ -20,7 +20,6 @@ public class MathCmp <T extends Number>{
 	{
 		int size = numbers.size();
 		int secondSize = second.getNumbers().size();
-				
 		int number, secondNumber;
 		int no = (size>secondSize)?size:secondSize;
 		for(int i=0 ; i<no ; i++)
@@ -28,7 +27,7 @@ public class MathCmp <T extends Number>{
 			number = numbers.get(i).intValue();
 			secondNumber = second.getNumbers().get(i).intValue();
 		
-			if(numbers.get(i).equals(second.getNumbers().get(i)))
+			if(!(numbers.get(i).equals(second.getNumbers().get(i))))
 				return false;
 		}
 		return true;
